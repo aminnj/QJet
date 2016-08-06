@@ -13,7 +13,7 @@ scram b -j2
 ```
 To do a quick test run over one file:
 ```
-cd test
+cd NtupleMaker/test
 cmsRun pset.py # produces ntuple.root
 ```
 
