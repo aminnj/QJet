@@ -27,7 +27,7 @@ process.load("QJet.NtupleMaker.qJetMaker_cfi")
 #Options for Input
 process.source = cms.Source("PoolSource",
   fileNames = cms.untracked.vstring(
-      'file:3408A387-B514-E611-BBF8-02163E011E16.root',
+      '/store/data/Run2016B/JetHT/MINIAOD/PromptReco-v1/000/272/674/00000/3408A387-B514-E611-BBF8-02163E011E16.root',
       )
 )
 process.source.noEventSort = cms.untracked.bool( True )
