@@ -7,7 +7,7 @@ CMSSWREL=CMSSW_8_0_7
 cmsrel $CMSSWREL
 cd $CMSSWREL/src
 cmsenv
-git clone https://github.com/aminnj/QJet
+git clone git@github.com:aminnj/QJet.git
 cd QJet
 scram b -j2
 ```
