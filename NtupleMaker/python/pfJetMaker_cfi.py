@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-qJetMaker = cms.EDProducer("QJetMaker",
+pfJetMaker = cms.EDProducer("PFJetMaker",
   aliasPrefix = cms.untracked.string("pfjets"),
   pfJetsInputTag                   = cms.InputTag("slimmedJets","","RECO"),
   pfCandidatesTag                  = cms.InputTag("packedPFCandidates"),

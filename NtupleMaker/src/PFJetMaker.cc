@@ -3,7 +3,7 @@
 #include "FWCore/Framework/interface/EventSetup.h"
 #include "FWCore/Framework/interface/ESHandle.h"
 #include "DataFormats/Math/interface/LorentzVector.h"
-#include "QJet/NtupleMaker/interface/QJetMaker.h"
+#include "QJet/NtupleMaker/interface/PFJetMaker.h"
 #include "DataFormats/JetReco/interface/PFJet.h"
 #include "JetMETCorrections/Objects/interface/JetCorrector.h"
 #include "DataFormats/ParticleFlowCandidate/interface/PFCandidateFwd.h"
@@ -14,7 +14,7 @@
 typedef math::XYZTLorentzVectorF LorentzVector;
 
 // Constructor
-QJetMaker::QJetMaker(const edm::ParameterSet& iConfig){
+PFJetMaker::PFJetMaker(const edm::ParameterSet& iConfig){
   using namespace std;
   using namespace edm;
 
@@ -59,16 +59,16 @@ QJetMaker::QJetMaker(const edm::ParameterSet& iConfig){
 }
 
 // Destructor
-QJetMaker::~QJetMaker(){
+PFJetMaker::~PFJetMaker(){
 }
 
 // ------------ method called once each job just before starting event loop  ------------
-void QJetMaker::beginJob() {}
+void PFJetMaker::beginJob() {}
 
 // ------------ method called once each job just after ending the event loop  ------------
-void QJetMaker::endJob() {}
+void PFJetMaker::endJob() {}
 
-void QJetMaker::produce(edm::Event& iEvent, const edm::EventSetup& iSetup){
+void PFJetMaker::produce(edm::Event& iEvent, const edm::EventSetup& iSetup){
 
   using namespace std;
   using namespace edm;
@@ -201,4 +201,4 @@ void QJetMaker::produce(edm::Event& iEvent, const edm::EventSetup& iSetup){
 }
 
 //define this as a plug-in
-DEFINE_FWK_MODULE(QJetMaker);
+DEFINE_FWK_MODULE(PFJetMaker);

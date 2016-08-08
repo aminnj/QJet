@@ -1,9 +1,9 @@
 // -*- C++ -*-
 //
-// Package:    QJetMaker
-// Class:      QJetMaker
+// Package:    PFJetMaker
+// Class:      PFJetMaker
 // 
-/**\class QJetMaker QJetMaker.cc temp/QJetMaker/src/QJetMaker.cc
+/**\class PFJetMaker PFJetMaker.cc temp/PFJetMaker/src/PFJetMaker.cc
 
 Description: <one line class summary>
 
@@ -13,7 +13,7 @@ Implementation:
 //
 // Original Author:  Puneeth Devanand KALAVASE
 //         Created:  Tue Sep  1 22:18:18 CEST 2009
-// $Id: QJetMaker.h,v 1.9 2012/05/13 04:22:36 fgolf Exp $
+// $Id: PFJetMaker.h,v 1.9 2012/05/13 04:22:36 fgolf Exp $
 //
 //
 
@@ -38,10 +38,10 @@ Implementation:
 #include "DataFormats/PatCandidates/interface/Jet.h"
 #include "DataFormats/PatCandidates/interface/PackedCandidate.h"
 
-class QJetMaker : public edm::EDProducer {
+class PFJetMaker : public edm::EDProducer {
 public:
-  explicit QJetMaker(const edm::ParameterSet&);
-  ~QJetMaker();
+  explicit PFJetMaker(const edm::ParameterSet&);
+  ~PFJetMaker();
 
 private:
   virtual void beginJob() ;

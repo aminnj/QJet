@@ -22,7 +22,11 @@ process.outpath = cms.EndPath(process.out)
 process.out.outputCommands = cms.untracked.vstring( 'drop *' )
 process.out.outputCommands.extend(cms.untracked.vstring('keep *_*_*_QJet*'))
 
-process.load("QJet.NtupleMaker.qJetMaker_cfi")
+process.load("QJet.NtupleMaker.pfJetMaker_cfi")
+process.load("QJet.NtupleMaker.eventMaker_cfi")
+process.load("QJet.NtupleMaker.fastJetMaker_cfi")
+process.load("QJet.NtupleMaker.metFilterMaker_cfi")
+process.load("QJet.NtupleMaker.vertexMaker_cfi")
 
 #Options for Input
 process.source = cms.Source("PoolSource",
@@ -35,6 +39,9 @@ process.source.noEventSort = cms.untracked.bool( True )
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100) )
 
 process.p = cms.Path( 
-  process.qJetMaker
+  process.eventMaker *
+  process.pfJetMaker *
+  process.fixedGridRhoAllMaker *
+  process.vertexMaker
 )
 
