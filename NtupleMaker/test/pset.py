@@ -27,6 +27,7 @@ process.load("QJet.NtupleMaker.eventMaker_cfi")
 process.load("QJet.NtupleMaker.fastJetMaker_cfi")
 process.load("QJet.NtupleMaker.metFilterMaker_cfi")
 process.load("QJet.NtupleMaker.vertexMaker_cfi")
+process.load("QJet.NtupleMaker.hltMaker_cfi")
 
 #Options for Input
 process.source = cms.Source("PoolSource",
@@ -42,6 +43,7 @@ process.p = cms.Path(
   process.eventMaker *
   process.pfJetMaker *
   process.fixedGridRhoAllMaker *
-  process.vertexMaker
+  process.vertexMaker *
+  process.hltMaker
 )
 

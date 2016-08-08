@@ -43,7 +43,6 @@ private:
 
   // ----------member data ---------------------------
   edm::EDGetTokenT<reco::VertexCollection> primaryVertexToken;
-  edm::EDGetTokenT<edm::ValueMap<float> > primaryVertexScoreToken;
 
 	std::string aliasprefix_;
 };
